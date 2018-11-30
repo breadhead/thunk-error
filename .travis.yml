@@ -3,6 +3,6 @@ node_js:
 - '8'
 - '10'
 cache: yarn
-before_install:
+before_script:
   - npm i redux --no-save
 script: yarn ci
