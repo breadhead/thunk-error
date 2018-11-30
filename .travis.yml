@@ -4,5 +4,14 @@ node_js:
 - '10'
 cache: yarn
 before_script:
-  - npm i redux --no-save
+- npm i redux --no-save
 script: yarn ci
+deploy:
+  provider: npm
+  email: igor@kamyshev.me
+  skip_cleanup: true
+  api_key:
+    secure: aVstwfDu4Wus4syT5dmgZxiIuZrv07WQB1JhF1ZQoGSrAeMQQLyxYe95gCBctbgICRywHVG96jzNWWTk+ZWA+MJdgU+m8DpiF9KOpZWG/2ARN/jYZn7GVgvrFliAWp5ktjnigYIh1VvKjC5Tny2KCPH5I+JNJr/8ZbZcMVpNNJ0mRxhTSoIZVp0HelQ+uM48o7lyJpBbjr+dL7mLEGOxqgOIuHgAUAcZ2HsQtiZwDv1k3DLSdevaVr6PK4dQbr3QoyRVuZLDxY8mRd01SVnf4YhVHrQsaEMRivRq/wxuVGfU0tTaki8NLAzbvra0RGIB8Gpp7KTeu2/Axsh8BINm5aXirrYm22S3R2ZYVi2gn9OX18FQ+UOmPg7setKg+kKfvvfeq34sn4tFKYRlMhD3VLtJ4J6AOpIOCuDaUBFKRWhauh2wsnmsZLKs9Cxv3lX59TOrviZJXHyjOTRnGq9Jaz7KutbDs/emVM4lJStPaz0OCXcxhVl8Izz5p6IbFZU2/DtA5hnDl1b+RQo4gaIAO5ttMA9JpUT1OcDSRoKRfZZA02or0LxnSt/B7vhRqylKzNeqa3+kj4mZFEeSpEkw7Pcd6GyxFBzZgBrQxJq6kdq7GxW1mKOXApChvAq7rgORvsxW9cW7AHoVS1pRez1gKPrroCr+qjuThb3n4D0Vn7g=
+  on:
+    tags: true
+    repo: breadhead/thunk-error
