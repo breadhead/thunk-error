@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "prepare": "yarn build",
+    "prepare": "install-self-peers -- --ignore-scripts && yarn build",
     "ci": "yarn test && yarn lint",
     "test": "jest",
     "lint": "tslint -p tsconfig.json -c tslint.json"
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/breadhead/thunk-error#readme",
   "devDependencies": {
+    "@team-griffin/install-self-peers": "^1.1.1",
     "@types/jest": "^23.3.10",
     "@types/node": "^10.11.7",
     "jest": "^23.6.0",
