@@ -1,6 +1,6 @@
 {
   "name": "@breadhead/thunk-error",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Middleware for handling errors in thunk",
   "main": "dist/index.js",
   "scripts": {
