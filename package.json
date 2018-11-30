@@ -1,0 +1,40 @@
+{
+  "name": "@breadhead/thunk-error",
+  "version": "1.0.0",
+  "description": "Middleware for handling errors in thunk",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "yarn build",
+    "test": "yarn lint",
+    "lint": "tslint -p tsconfig.json -c tslint.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breadhead/thunk-error.git"
+  },
+  "keywords": [
+    "thunk",
+    "redux",
+    "error",
+    "middleware"
+  ],
+  "author": "Igor Kamyshev <igor@breadhead.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/breadhead/thunk-error/issues"
+  },
+  "homepage": "https://github.com/breadhead/thunk-error#readme",
+  "dependencies": {
+    "@nestjs/cqrs": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.11.7",
+    "tslint": "^5.11.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.1.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
