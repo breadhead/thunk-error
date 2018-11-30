@@ -1,4 +1,4 @@
-# redux-thunk
+# thunk-error
 
 ## Instalation
 
@@ -8,6 +8,7 @@
 
 ```js
 import { applyMiddleware, combineReducers, createStore } from 'redux'
+import thunk from 'redux-thunk';
 
 import { createErrorMiddleware } from '@breadhead/thunk-error'
 
