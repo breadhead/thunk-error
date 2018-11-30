@@ -1,4 +1,4 @@
-import { Action, Dispatch, MiddlewareAPI } from 'redux'
+import { Action, Dispatch, MiddlewareAPI, Middleware } from 'redux'
 
 type SupportsError<Error> = (error: Error) => boolean
 type HandleError = () => Action | Function // tslint:disable-line ban-types
@@ -6,9 +6,9 @@ type HandleError = () => Action | Function // tslint:disable-line ban-types
 export const createErrorMiddleware = <Error = any>(
   supportsError: SupportsError<Error>,
   dispatchOnError: HandleError,
-) =>
-  (middleware: MiddlewareAPI<any>) =>
-    (next: Dispatch<any>) =>
+): Middleware =>
+  (middleware: MiddlewareAPI) =>
+    (next: Dispatch) =>
       (action: any) => next(
         action instanceof Function // tslint:disable-line ban-types
           ? addErrorHandling(middleware, supportsError, dispatchOnError)(action)
