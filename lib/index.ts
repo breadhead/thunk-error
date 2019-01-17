@@ -24,8 +24,10 @@ const addErrorHandling = <Error>(
 ) => (...args: any[]) => {
   const handleError = (err: Error) => {
     if (supportsError(err)) {
-      middleware.dispatch(dispatchOnError())
+      return middleware.dispatch(dispatchOnError())
     }
+
+    throw err
   }
 
   let result
