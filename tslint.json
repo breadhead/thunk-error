@@ -1,31 +1,18 @@
 {
   "defaultSeverity": "error",
-  "extends": [
-    "tslint:recommended"
-  ],
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "jsRules": {},
   "rules": {
-    "ter-indent": [
-      true,
-      2
-    ],
-    "semicolon": [
-      true,
-      "never"
-    ],
-    "quotemark": [
-      true,
-      "single"
-    ],
-    "interface-name": [
-      true,
-      "never-prefix"
-    ],
+    "ter-indent": [true, 2],
+    "semicolon": [true, "never"],
+    "quotemark": [true, "single"],
+    "interface-name": [true, "never-prefix"],
     "variable-name": false,
     "trailing-comma": [
       true,
       {
         "multiline": "always",
-        "singleline": "never",
+        "singleline": "es5",
         "esSpecCompliant": true
       }
     ],
@@ -42,9 +29,10 @@
       "check-type-operator",
       "check-preblock"
     ],
-    "object-literal-sort-keys": false
+    "object-literal-sort-keys": false,
+    "no-submodule-imports": false,
+    "no-implicit-dependencies": false,
+    "no-object-literal-type-assertion": false
   },
-  "rulesDirectory": [
-    "node_modules/tslint-eslint-rules/dist/rules"
-  ]
+  "rulesDirectory": ["node_modules/tslint-eslint-rules/dist/rules"]
 }
